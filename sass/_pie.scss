@@ -1,0 +1,72 @@
+/* Estilo footer */
+footer {
+    background-color: #bdff00;
+}
+
+.contenedorFooter {
+    margin: 0 auto;
+    padding: 2% 5%;
+    max-width: 100%;
+}
+
+.footer__left,
+.footer__center,
+.footer__right {
+    text-align: center;
+}
+
+.footer__center {
+    padding: 20px;
+}
+
+.footer__logoBearbrick {
+    width: 200px;
+}
+
+.footer__nav {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul.footer__nav {
+    margin-bottom: 0;
+}
+
+.footer__nav-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer__nav-item:last-child {
+    margin-right: 0;
+}
+
+.footer__nav-item a {
+    color: #131313;
+    text-decoration: none;
+}
+
+.footer__nav-item a:hover {
+    text-decoration: underline;
+}
+
+.footer__linkedinIcon {
+    width: 40px;
+    height: 40px;
+    fill: #131313;
+}
+
+/* Estilo copyright */
+.copyright {
+    background-color: #131313;
+    color: #ffffff;
+    padding: 1% 0;
+    text-align: center;
+}
+
+.copyright__text {
+    color: #ffffff;
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+}

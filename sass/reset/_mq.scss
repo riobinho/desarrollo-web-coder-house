@@ -1,0 +1,33 @@
+@media (max-width: 767.98px) {
+    .headerWeb__right {
+        display: none !important;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 400;
+        line-height: 1em;
+        margin: 10% 0%;
+    }
+            
+    h2 {
+        font-size: 1.5em;
+        font-weight: 400;
+        line-height: 1.2em;
+        margin: 3% 0%;
+    }
+
+    .tresModelos {
+        display: block;
+    }
+
+    .modelo--center, .modelo--left {
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .footer__nav-item {
+        display: block;
+        margin-right: 0px;
+    }    
+}
