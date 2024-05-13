@@ -3,23 +3,23 @@
     padding: 2% 5%;
     margin: 0;
     max-width: 100%;
-}
 
-.bannerInicio__left {
-    display: flex;
-    align-items: center;
-}
+    &__left {
+        display: flex;
+        align-items: center;
+    }
 
-.bannerInicio__description {
-    line-height: 1.6em;
-}
+    &__description {
+        line-height: 1.6em;
+    }
 
-.bannerInicio__logo {
-    width: 50%;
-}
+    &__logo {
+        width: 50%;
+    }
 
-.bannerInicio__image {
-    width: 100%;
+    &__image {
+        width: 100%;
+    }
 }
 
 
@@ -48,17 +48,16 @@ h2 {
     padding: 3% 5%;
     text-align: center;
     width: 100%;
-}
 
-.experience__text {
-    margin: 0% 10%;
-}
+    &__text {
+        margin: 0% 10%;
+    }
 
-.experience__image {
-    border-radius: 16px;
-    margin-top: 3%;
+    &__image {
+        border-radius: 16px;
+        margin-top: 3%;
+    }
 }
-
 
 /* Estilo section modelos */
 .modelos {
@@ -66,13 +65,12 @@ h2 {
     margin: 0 auto;
     padding: 3% 5%;
     text-align: center;
-}
 
-.modelos__list {
-    list-style: none;
-    padding: 0;
+    &__list {
+        list-style: none;
+        padding: 0;
+    }
 }
-
 
 /* Estilo section tres modelos */
 .tresModelos {
@@ -81,55 +79,56 @@ h2 {
     display: flex;
     padding: 0;
     max-width: 100%;
+    overflow-x: hidden;
 }
-
 
 .modelo {
     border: 1px solid #9a9a9a;
     padding: 3%;
     display: flex;
     flex-direction: column;
+
+    &--center, &--left {
+        border-left: none;
+    }
+
+    &--right {
+        border-left: none;
+        border-right: none;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+
+    &__numero {
+        border-radius: 50%;
+        border: 1px solid #9a9a9a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+        width: 2rem;
+    }
+
+    &__nombre {
+        background-color: #bdff00;
+        border-radius: 40px;
+        border: none;
+        color: #131313;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__imagen {
+        width: 100%;
+    }
 }
 
-.modelo--center, .modelo--left {
-    border-left: none;
-}
-
-.modelo--right {
-    border-left: none;
-    border-right: none;
-}
-
-.modelo__info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-}
-
-.modelo__numero {
-    border-radius: 50%;
-    border: 1px solid #9a9a9a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    width: 2rem;
-}
-
-.modelo__nombre {
-    background-color: #bdff00;
-    border-radius: 40px;
-    border: none;
-    color: #131313;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.modelo__imagen {
-    width: 100%;
-}
 
 /* Estilos banner audio */
 .bannerAudio {
@@ -187,104 +186,105 @@ h2 {
 
 /* Estilos para el bloque del modelo */
 
-.bloque-modelo__contenido-1 {
-    background-color: #bdff00;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding: 1.2em;
-    row-gap: 4em;
-}
+.bloque-modelo {
+    &__contenido-1 {
+        background-color: #bdff00;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 1.2em;
+        row-gap: 4em;
+    }
 
-.bloque-modelo__numero {
-    align-items: center;
-    border-radius: 50%;
-    border: 1px solid #000000;
-    display: flex;
-    font-size: 2rem;
-    height: 3rem;
-    justify-content: center;
-    width: 3rem;
-}
+    &__numero {
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid #000000;
+        display: flex;
+        font-size: 2rem;
+        height: 3rem;
+        justify-content: center;
+        width: 3rem;
+    }
 
-.bloque-modelo__contenido-2 {
-    background-color: #000000;
-    border-radius: 16px;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    margin-top: 1em;
-    padding: 1.2em;
-    color: #ffffff;
-}
+    &__contenido-2 {
+        background-color: #000000;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 1em;
+        padding: 1.2em;
+        color: #ffffff;
 
-.bloque-modelo__contenido-2 details {
-    border-top: 1px solid;
-    padding-top: 1em;
-}
+        details {
+            border-top: 1px solid;
+            padding-top: 1em;
+        }
 
-.bloque-modelo__contenido-2 summary {
-    padding: 0.5em 0em;
-}
+        summary {
+            padding: 0.5em 0;
+        }
 
-.bloque-modelo__contenido-2 p {
-    margin-bottom: 1em;
+        p {
+            margin-bottom: 1em;
+        }
+    }
 }
 
 /* Estilos para el bloque de imagen */
 .bloque-imagen {
-    height: auto; 
-}
+    height: auto;
 
-.bloque-imagen img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
+    img {
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+    }
 }
-
 
 /* Banner compañia */
 .bannerCompania {
-    background-image: url(../assets/medicom-toy-compania.jpg);
+    background-image: url("../assets/medicom-toy-compania.jpg");
     background-size: cover;
     height: 600px;
     padding: 0.5% 5%;
     max-width: 100%;
-}
 
-.bannerCompania__content {
-    color: #FFFFFF;
+    &__content {
+        color: #FFFFFF;
+    }
 }
 
 .twoColumnSection {
     padding: 4% 5%;
     max-width: 100%;
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__paragraph {
+        margin-top: 1.5rem;
+    }
+
+    &__image {
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+    }
 }
-
-.twoColumnSection__title {
-    margin-top: 0;
-}
-
-.twoColumnSection__paragraph {
-    margin-top: 1.5rem;
-}
-
-.twoColumnSection__image {
-    border-radius: 16px;
-    width: 100%;
-    height: auto;
-}
-
-
 
 /* Contacto */
-.form-column__title {
-    margin-bottom: 20px;
-}
+.form-column {
+    &__title {
+        margin-bottom: 20px;
+    }
 
-.form-column__form {
-    max-width: 100%;
+    &__form {
+        max-width: 100%;
+    }
 }
 
 .form-control {
@@ -297,5 +297,12 @@ h2 {
 }
 
 .btn {
-    border-radius: 16px;
+    border-radius: 20px;
+    background-color: #131313;
+    border: none;
+
+    &:hover {
+        background-color: #bdff00;
+        color: #000000;
+    }
 }

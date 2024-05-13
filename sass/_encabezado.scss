@@ -1,67 +1,71 @@
-/* Header en 3 columnas */
 .headerWeb {
     margin: 0 auto;
     padding: 1% 5%;
+
+    &__contacto {
+        background-color: #bdff00;
+        border-radius: 40px;
+        border: none;
+        color: #000000;
+        padding: 10px 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+        background-color: #131313;
+        color: #FFFFFF;
+        }
+    }
+
+    &__offcanvas {
+        width: 300px;
+
+        .listaMenu__item a {
+        color: #131313;
+        text-decoration: none;
+
+        &:hover {
+            color: #131313;
+            text-decoration: underline;
+            }
+        }
+    }
+
+    &__toggler {
+        display: flex;
+        justify-content: end;
+        flex: 1;
+        }
 }
 
-/* Estilo elemento menú página actual */
-.listaMenu__item.activo {
-    font-weight: 600;
-    text-decoration: underline;
-}
-
-/* Estilo botón contacto */
-.headerWeb__contacto {
-    background-color: #bdff00;
-    border-radius: 40px;
-    border: none;
-    color: #000000;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.headerWeb__contacto:hover {
-    background-color: #131313;
-    color: #FFFFFF;
-}
-
-/* Estilo menú header */
-ul.listaMenu {
+.listaMenu {
     margin-bottom: 0;
-}
 
-.listaMenu__item {
-    margin: 0% 5%;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    list-style: none;
-}
+    &__item {
+        margin: 0% 5%;
+        padding: 10px 20px;
+        text-transform: uppercase;
+        list-style: none;
+    
+        &.activo {
+            font-weight: 600;
+            text-decoration: underline;
+        }
 
-.listaMenu__item a {
-    color: #131313;
-    text-decoration: none;
-}
+        a {
+        color: #131313;
+        text-decoration: none;
 
-.listaMenu__item a:hover {
-    color: #131313;
-    text-decoration: underline;
-}
-
-/* Estilos para el menú hamburguesa */
-.headerWeb__toggler {
-    display: flex;
-    justify-content: end;
-    flex: 1;
+        &:hover {
+            color: #131313;
+            text-decoration: underline;
+            }
+        }
+    }
 }
 
 .navbar-toggler-icon {
     background-image: url(../assets/menu-hamburguesa.svg);
-}
-
-/* Estilos para el Offcanvas Navbar */
-.headerWeb__offcanvas {
-    width: 300px;
 }
 
 .offcanvas-header {
@@ -71,14 +75,4 @@ ul.listaMenu {
 
 .offcanvas-body {
     padding: 0;
-}
-
-.headerWeb__offcanvas .listaMenu__item a {
-    color: #131313;
-    text-decoration: none;
-}
-
-.headerWeb__offcanvas .listaMenu__item a:hover {
-    color: #131313;
-    text-decoration: underline;
 }

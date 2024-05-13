@@ -7,19 +7,10 @@
   padding: 0;
 }
 
-/* Header en 3 columnas */
 .headerWeb {
   margin: 0 auto;
   padding: 1% 5%;
 }
-
-/* Estilo elemento menú página actual */
-.listaMenu__item.activo {
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-/* Estilo botón contacto */
 .headerWeb__contacto {
   background-color: #bdff00;
   border-radius: 40px;
@@ -29,48 +20,51 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .headerWeb__contacto:hover {
   background-color: #131313;
   color: #FFFFFF;
 }
-
-/* Estilo menú header */
-ul.listaMenu {
-  margin-bottom: 0;
+.headerWeb__offcanvas {
+  width: 300px;
 }
-
-.listaMenu__item {
-  margin: 0% 5%;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  list-style: none;
-}
-
-.listaMenu__item a {
+.headerWeb__offcanvas .listaMenu__item a {
   color: #131313;
   text-decoration: none;
 }
-
-.listaMenu__item a:hover {
+.headerWeb__offcanvas .listaMenu__item a:hover {
   color: #131313;
   text-decoration: underline;
 }
-
-/* Estilos para el menú hamburguesa */
 .headerWeb__toggler {
   display: flex;
   justify-content: end;
   flex: 1;
 }
 
-.navbar-toggler-icon {
-  background-image: url(../assets/menu-hamburguesa.svg);
+.listaMenu {
+  margin-bottom: 0;
+}
+.listaMenu__item {
+  margin: 0% 5%;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  list-style: none;
+}
+.listaMenu__item.activo {
+  font-weight: 600;
+  text-decoration: underline;
+}
+.listaMenu__item a {
+  color: #131313;
+  text-decoration: none;
+}
+.listaMenu__item a:hover {
+  color: #131313;
+  text-decoration: underline;
 }
 
-/* Estilos para el Offcanvas Navbar */
-.headerWeb__offcanvas {
-  width: 300px;
+.navbar-toggler-icon {
+  background-image: url(../assets/menu-hamburguesa.svg);
 }
 
 .offcanvas-header {
@@ -82,36 +76,22 @@ ul.listaMenu {
   padding: 0;
 }
 
-.headerWeb__offcanvas .listaMenu__item a {
-  color: #131313;
-  text-decoration: none;
-}
-
-.headerWeb__offcanvas .listaMenu__item a:hover {
-  color: #131313;
-  text-decoration: underline;
-}
-
 /* Banner Inicio*/
 .bannerInicio {
   padding: 2% 5%;
   margin: 0;
   max-width: 100%;
 }
-
 .bannerInicio__left {
   display: flex;
   align-items: center;
 }
-
 .bannerInicio__description {
   line-height: 1.6em;
 }
-
 .bannerInicio__logo {
   width: 50%;
 }
-
 .bannerInicio__image {
   width: 100%;
 }
@@ -142,11 +122,9 @@ h2 {
   text-align: center;
   width: 100%;
 }
-
 .experience__text {
   margin: 0% 10%;
 }
-
 .experience__image {
   border-radius: 16px;
   margin-top: 3%;
@@ -159,7 +137,6 @@ h2 {
   padding: 3% 5%;
   text-align: center;
 }
-
 .modelos__list {
   list-style: none;
   padding: 0;
@@ -172,6 +149,7 @@ h2 {
   display: flex;
   padding: 0;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .modelo {
@@ -180,23 +158,19 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-
 .modelo--center, .modelo--left {
   border-left: none;
 }
-
 .modelo--right {
   border-left: none;
   border-right: none;
 }
-
 .modelo__info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .modelo__numero {
   border-radius: 50%;
   border: 1px solid #9a9a9a;
@@ -206,7 +180,6 @@ h2 {
   height: 2rem;
   width: 2rem;
 }
-
 .modelo__nombre {
   background-color: #bdff00;
   border-radius: 40px;
@@ -216,7 +189,6 @@ h2 {
   text-decoration: none;
   text-transform: uppercase;
 }
-
 .modelo__imagen {
   width: 100%;
 }
@@ -284,7 +256,6 @@ h2 {
   padding: 1.2em;
   row-gap: 4em;
 }
-
 .bloque-modelo__numero {
   align-items: center;
   border-radius: 50%;
@@ -295,7 +266,6 @@ h2 {
   justify-content: center;
   width: 3rem;
 }
-
 .bloque-modelo__contenido-2 {
   background-color: #000000;
   border-radius: 16px;
@@ -306,16 +276,13 @@ h2 {
   padding: 1.2em;
   color: #ffffff;
 }
-
 .bloque-modelo__contenido-2 details {
   border-top: 1px solid;
   padding-top: 1em;
 }
-
 .bloque-modelo__contenido-2 summary {
-  padding: 0.5em 0em;
+  padding: 0.5em 0;
 }
-
 .bloque-modelo__contenido-2 p {
   margin-bottom: 1em;
 }
@@ -324,7 +291,6 @@ h2 {
 .bloque-imagen {
   height: auto;
 }
-
 .bloque-imagen img {
   height: 100%;
   object-fit: cover;
@@ -333,13 +299,12 @@ h2 {
 
 /* Banner compañia */
 .bannerCompania {
-  background-image: url(../assets/medicom-toy-compania.jpg);
+  background-image: url("../assets/medicom-toy-compania.jpg");
   background-size: cover;
   height: 600px;
   padding: 0.5% 5%;
   max-width: 100%;
 }
-
 .bannerCompania__content {
   color: #FFFFFF;
 }
@@ -348,15 +313,12 @@ h2 {
   padding: 4% 5%;
   max-width: 100%;
 }
-
 .twoColumnSection__title {
   margin-top: 0;
 }
-
 .twoColumnSection__paragraph {
   margin-top: 1.5rem;
 }
-
 .twoColumnSection__image {
   border-radius: 16px;
   width: 100%;
@@ -367,7 +329,6 @@ h2 {
 .form-column__title {
   margin-bottom: 20px;
 }
-
 .form-column__form {
   max-width: 100%;
 }
@@ -382,10 +343,49 @@ h2 {
 }
 
 .btn {
-  border-radius: 16px;
+  border-radius: 20px;
+  background-color: #131313;
+  border: none;
+}
+.btn:hover {
+  background-color: #bdff00;
+  color: #000000;
 }
 
-/* Estilo footer */
+.footer__left, .footer__center, .footer__right {
+  text-align: center;
+}
+.footer__center {
+  padding: 20px;
+}
+.footer__logoBearbrick {
+  width: 200px;
+}
+.footer__nav {
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+}
+.footer__nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+.footer__nav-item:last-child {
+  margin-right: 0;
+}
+.footer__nav-item a {
+  color: #131313;
+  text-decoration: none;
+}
+.footer__nav-item a:hover {
+  text-decoration: underline;
+}
+.footer__linkedinIcon {
+  width: 40px;
+  height: 40px;
+  fill: #131313;
+}
+
 footer {
   background-color: #bdff00;
 }
@@ -396,61 +396,12 @@ footer {
   max-width: 100%;
 }
 
-.footer__left,
-.footer__center,
-.footer__right {
-  text-align: center;
-}
-
-.footer__center {
-  padding: 20px;
-}
-
-.footer__logoBearbrick {
-  width: 200px;
-}
-
-.footer__nav {
-  padding-left: 0;
-  list-style: none;
-}
-
-ul.footer__nav {
-  margin-bottom: 0;
-}
-
-.footer__nav-item {
-  display: inline-block;
-  margin-right: 20px;
-}
-
-.footer__nav-item:last-child {
-  margin-right: 0;
-}
-
-.footer__nav-item a {
-  color: #131313;
-  text-decoration: none;
-}
-
-.footer__nav-item a:hover {
-  text-decoration: underline;
-}
-
-.footer__linkedinIcon {
-  width: 40px;
-  height: 40px;
-  fill: #131313;
-}
-
-/* Estilo copyright */
 .copyright {
   background-color: #131313;
   color: #ffffff;
   padding: 1% 0;
   text-align: center;
 }
-
 .copyright__text {
   color: #ffffff;
   margin: 0;
