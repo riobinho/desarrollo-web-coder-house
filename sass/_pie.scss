@@ -28,12 +28,7 @@
         }
 
         a {
-            color: #131313;
-            text-decoration: none;
-    
-            &:hover {
-                text-decoration: underline;
-            }
+            @include link-style;
         }
     }
 }
@@ -41,22 +36,20 @@
     &__linkedinIcon {
         width: 40px;
         height: 40px;
-        fill: #131313;
+        fill: $color-negro;
     }
 }
 
 footer {
-    background-color: #bdff00;
+    @include fondoColor($color-verde, unset);
 }
 .contenedorFooter {
-    margin: 0 auto;
-    padding: 2% 5%;
+    @include espacio(2% 5%, 0 auto);
     max-width: 100%;
 }
 
 .copyright {
-    background-color: #131313;
-    color: #ffffff;
+    @include fondoColor($color-negro, #ffffff);
     padding: 1% 0;
     text-align: center;
 

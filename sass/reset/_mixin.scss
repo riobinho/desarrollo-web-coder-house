@@ -1,0 +1,49 @@
+@mixin espacio($p, $m) {
+    padding: $p;
+    margin: $m;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin link-style {
+    color: $color-negro;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin titulo($size, $weight, $line-height, $margin) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+    margin: $margin;
+}
+
+@mixin fondoImagen($image) {
+    background-image: url($image);
+    background-size: cover;
+    height: 600px;
+    padding: 0.5% 5%;
+    max-width: 100%;
+}
+
+@mixin altoanchoMax {
+    height: 100%;
+    width: 100%;
+}
+
+@mixin fondoColor ($bg, $color) {
+    background-color: $bg;
+    color: $color;
+}
+
+@mixin sinBorde ($radio) {
+    border-radius: $radio;
+    border: none;
+}
+

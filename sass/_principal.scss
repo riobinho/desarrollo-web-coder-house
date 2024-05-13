@@ -1,12 +1,10 @@
 /* Banner Inicio*/
 .bannerInicio {
-    padding: 2% 5%;
-    margin: 0;
+    @include espacio(2% 5%, 0);
     max-width: 100%;
 
     &__left {
-        display: flex;
-        align-items: center;
+        @include flex-center;
     }
 
     &__description {
@@ -22,32 +20,20 @@
     }
 }
 
-
 /* Estilo de los títulos */
-h1 {
-    font-size: 3.7em;
-    font-weight: 400;
-    line-height: 65px;
-    margin: 5% 0%;
-}
+    h1 {
+        @include titulo(3.7em, 400, 65px, 5% 0%);
+    }
 
-h2 {
-    font-size: 3em;
-    font-weight: 400;
-    line-height: 1.2em;
-    margin: 3% 0%;
-}
+    h2 {
+        @include titulo(3em, 400, 1.2em, 3% 0%);
+    }
 
 /* Estilo section experience */
 .experience {
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-sizing: border-box;
-    height: 100%;
-    margin: 0 auto;
-    padding: 3% 5%;
+    @include espacio(3% 5%, 0 auto);
+    @include altoanchoMax;
     text-align: center;
-    width: 100%;
 
     &__text {
         margin: 0% 10%;
@@ -61,9 +47,7 @@ h2 {
 
 /* Estilo section modelos */
 .modelos {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 3% 5%;
+    @include espacio(3% 5%, 0 auto);
     text-align: center;
 
     &__list {
@@ -74,16 +58,14 @@ h2 {
 
 /* Estilo section tres modelos */
 .tresModelos {
-    box-sizing: border-box;
-    margin: 0 auto;
+    @include espacio(0, 0 auto);
     display: flex;
-    padding: 0;
     max-width: 100%;
     overflow-x: hidden;
 }
 
 .modelo {
-    border: 1px solid #9a9a9a;
+    border: $borde-gris;
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -98,27 +80,24 @@ h2 {
     }
 
     &__info {
-        display: flex;
+        @include flex-center;
         justify-content: space-between;
-        align-items: center;
         margin-bottom: 1rem;
     }
 
     &__numero {
+        @include flex-center;
         border-radius: 50%;
-        border: 1px solid #9a9a9a;
-        display: flex;
+        border: $borde-gris;
         justify-content: center;
-        align-items: center;
         height: 2rem;
         width: 2rem;
     }
 
     &__nombre {
-        background-color: #bdff00;
+        @include sinBorde(40px);
+        @include fondoColor($color-verde, $color-negro);
         border-radius: 40px;
-        border: none;
-        color: #131313;
         padding: 10px 20px;
         text-decoration: none;
         text-transform: uppercase;
@@ -132,11 +111,7 @@ h2 {
 
 /* Estilos banner audio */
 .bannerAudio {
-    background-image: url(../assets/banner-audio.jpg);
-    background-size: cover;
-    height: 600px;
-    padding: 0.5% 5%;
-    max-width: 100%;
+    @include fondoImagen("../assets/banner-audio.jpg");
 }
 
 .bannerAudio__title {
@@ -150,10 +125,9 @@ h2 {
 /* Estilo Características Audio */
 
 .caracteristicasAudio {
+    @include espacio(4% 5%, 0 auto);
     background-color: #ffffff;
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 4% 5%;
     max-width: 100%;
 }
 
@@ -176,11 +150,10 @@ h2 {
 
 /* Estilo principal de la sección */
 .seccion-modelos {
+    @include espacio(0.5% 5% 5% 5%, 0 auto);
     box-sizing: border-box;
     display: flex;
     height: auto;
-    margin: 0 auto;
-    padding: 0.5% 5% 5% 5%;
     width: 100%;
 }
 
@@ -188,7 +161,7 @@ h2 {
 
 .bloque-modelo {
     &__contenido-1 {
-        background-color: #bdff00;
+        @include fondoColor($color-verde, unset);
         border-radius: 16px;
         display: flex;
         flex-direction: column;
@@ -198,10 +171,9 @@ h2 {
     }
 
     &__numero {
-        align-items: center;
+        @include flex-center;
         border-radius: 50%;
-        border: 1px solid #000000;
-        display: flex;
+        border: 1px solid $color-negro;
         font-size: 2rem;
         height: 3rem;
         justify-content: center;
@@ -209,14 +181,13 @@ h2 {
     }
 
     &__contenido-2 {
-        background-color: #000000;
+        @include fondoColor($color-negro, #ffffff);
         border-radius: 16px;
         display: flex;
         flex-direction: column;
         height: auto;
         margin-top: 1em;
         padding: 1.2em;
-        color: #ffffff;
 
         details {
             border-top: 1px solid;
@@ -238,19 +209,14 @@ h2 {
     height: auto;
 
     img {
-        height: 100%;
+        @include altoanchoMax;
         object-fit: cover;
-        width: 100%;
     }
 }
 
 /* Banner compañia */
 .bannerCompania {
-    background-image: url("../assets/medicom-toy-compania.jpg");
-    background-size: cover;
-    height: 600px;
-    padding: 0.5% 5%;
-    max-width: 100%;
+    @include fondoImagen("../assets/medicom-toy-compania.jpg");
 
     &__content {
         color: #FFFFFF;
@@ -297,12 +263,10 @@ h2 {
 }
 
 .btn {
-    border-radius: 20px;
-    background-color: #131313;
-    border: none;
+    @include fondoColor($color-negro, #ffffff);
+    @include sinBorde(20px);
 
     &:hover {
-        background-color: #bdff00;
-        color: #000000;
+        @include fondoColor($color-verde, $color-negro);
     }
 }
