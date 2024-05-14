@@ -1,9 +1,13 @@
 // Tipos
 $tipo-principal: "Instrument Sans", sans-serif;
 
-// Colores
-$color-verde: #bdff00;
-$color-negro: #131313;
-
 // Borde
 $borde-gris: 1px solid #9a9a9a;
+
+// Mapa colores
+
+$colors: (
+    "verde": #bdff00,
+    "negro": #131313,
+    "blanco": #ffffff
+);

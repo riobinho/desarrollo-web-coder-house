@@ -2,14 +2,14 @@
     @include espacio(1% 5%, 0 auto);
 
     &__contacto {
-        @include fondoColor($color-verde, $color-negro);
+        @include fondoColor(map-get($colors, "verde"), map-get($colors, "negro"));
         @include sinBorde(40px);
         padding: 10px 20px;
         text-decoration: none;
         text-transform: uppercase;
 
         &:hover {
-        @include fondoColor($color-negro, #ffffff);
+        @include fondoColor(map-get($colors, "negro"), map-get($colors, "blanco"));
         }
     }
 

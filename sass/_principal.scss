@@ -96,7 +96,7 @@
 
     &__nombre {
         @include sinBorde(40px);
-        @include fondoColor($color-verde, $color-negro);
+        @include fondoColor(map-get($colors, "verde"), map-get($colors, "negro"));
         border-radius: 40px;
         padding: 10px 20px;
         text-decoration: none;
@@ -105,6 +105,11 @@
 
     &__imagen {
         width: 100%;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.02);
+        }
     }
 }
 
@@ -126,7 +131,7 @@
 
 .caracteristicasAudio {
     @include espacio(4% 5%, 0 auto);
-    background-color: #ffffff;
+    background-color: map-get($colors, "blanco");
     box-sizing: border-box;
     max-width: 100%;
 }
@@ -161,7 +166,7 @@
 
 .bloque-modelo {
     &__contenido-1 {
-        @include fondoColor($color-verde, unset);
+        @include fondoColor(map-get($colors, "verde"), unset);
         border-radius: 16px;
         display: flex;
         flex-direction: column;
@@ -173,7 +178,7 @@
     &__numero {
         @include flex-center;
         border-radius: 50%;
-        border: 1px solid $color-negro;
+        border: 1px solid map-get($colors, "negro");
         font-size: 2rem;
         height: 3rem;
         justify-content: center;
@@ -181,7 +186,7 @@
     }
 
     &__contenido-2 {
-        @include fondoColor($color-negro, #ffffff);
+        @include fondoColor(map-get($colors, "negro"), map-get($colors, "blanco"));
         border-radius: 16px;
         display: flex;
         flex-direction: column;
@@ -208,9 +213,14 @@
 .bloque-imagen {
     height: auto;
 
-    img {
+    &__img {
         @include altoanchoMax;
         object-fit: cover;
+        transition: transform 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.12);
+        }
     }
 }
 
@@ -263,10 +273,10 @@
 }
 
 .btn {
-    @include fondoColor($color-negro, #ffffff);
+    @include fondoColor(map-get($colors, "negro"), map-get($colors, "blanco"));
     @include sinBorde(20px);
 
     &:hover {
-        @include fondoColor($color-verde, $color-negro);
+        @include fondoColor(map-get($colors, "verde"), map-get($colors, "negro"));
     }
 }

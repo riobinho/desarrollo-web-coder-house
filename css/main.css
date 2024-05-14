@@ -184,6 +184,10 @@ h2 {
 }
 .modelo__imagen {
   width: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+.modelo__imagen:hover {
+  transform: scale(1.02);
 }
 
 /* Estilos banner audio */
@@ -285,10 +289,14 @@ h2 {
 .bloque-imagen {
   height: auto;
 }
-.bloque-imagen img {
+.bloque-imagen__img {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+.bloque-imagen__img:hover {
+  transform: scale(1.12);
 }
 
 /* Banner compañia */
@@ -427,6 +435,12 @@ footer {
   .modelo--center, .modelo--left {
     border-right: none;
     border-bottom: none;
+  }
+  .bloque-imagen {
+    height: 400px;
+  }
+  .form-column {
+    padding: 5%;
   }
   .footer__nav-item {
     display: block;

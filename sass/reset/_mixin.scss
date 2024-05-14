@@ -9,7 +9,7 @@
 }
 
 @mixin link-style {
-    color: $color-negro;
+    color: map-get($colors, "negro");
     text-decoration: none;
 
     &:hover {
