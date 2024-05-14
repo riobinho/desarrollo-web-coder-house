@@ -1,0 +1,19 @@
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/logs
+
+# Archivos de compilación
+/build
+/dist
+/tmp
+
+# Archivos de configuración sensibles
+.env
+*.pem
+
+# Caché
+/cache
